@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James Green | BI Engineer & Developer</title>
+    <title>James Green | Analytics Engineer</title>
     <style>
         /* Reset some default browser styles */
-        body, h1, p {
+        body, h1, p, ul {
             margin: 0;
             padding: 0;
         }
@@ -38,8 +38,8 @@
             padding: 3rem;
             border-radius: 10px;
             text-align: center;
-            /* Ensure the box doesn't get too wide on large screens */
-            max-width: 600px;
+            /* Increased width to stop bullets from wrapping on desktop */
+            max-width: 850px; 
             width: 90%; /* Responsive width on mobile */
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
             border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
@@ -66,26 +66,72 @@
             margin-bottom: 1.5rem;
         }
 
+        /* Styling for the technical skills list */
+        .skills-list {
+            text-align: left;
+            color: #a8b2d1;
+            margin: 0 auto 2rem auto;
+            max-width: 90%;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            list-style-type: none; /* Removes default bullets */
+        }
+
+        .skills-list li::before {
+            content: "▹"; /* Custom tech-style bullet */
+            color: #64ffda;
+            margin-right: 10px;
+        }
+
+        .skills-list strong {
+            color: #fff; /* Highlights the category headers */
+        }
+
         .contact {
             margin-top: 2.5rem;
             padding-top: 1.5rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .contact a {
-            /* Style the email link to look like a button */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary, .btn-secondary {
             display: inline-block;
-            color: #0a192f; /* Dark text for contrast */
-            background-color: #64ffda; /* Match the subtitle color */
             text-decoration: none;
             font-weight: 600;
             padding: 0.75rem 1.5rem;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            /* Forced uniform sizing */
+            width: 180px;
+            text-align: center;
+            box-sizing: border-box;
         }
 
-        .contact a:hover {
-            background-color: #4cccb3; /* Slightly darker on hover */
+        .btn-primary {
+            color: #0a192f; 
+            background-color: #64ffda; 
+            border: 1px solid #64ffda;
+        }
+
+        .btn-primary:hover {
+            background-color: #4cccb3; 
+            border-color: #4cccb3;
+        }
+
+        .btn-secondary {
+            color: #64ffda;
+            background-color: transparent;
+            border: 1px solid #64ffda;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(100, 255, 218, 0.1);
         }
     </style>
 </head>
@@ -93,11 +139,22 @@
     <div class="container">
         <h1>James Green</h1>
         <div class="subtitle">Senior Analytics Engineer & Data Infrastructure Specialist</div>
-        <p>Specializing in data analytics, business intelligence, and building robust web solutions within the London insurance market.</p>
+        <p>Specialising in architecting scalable data infrastructure, governing enterprise semantic models, and driving Microsoft Fabric migrations within the London insurance and global logistics markets.</p>
+        
+        <ul class="skills-list">
+            <li><strong>Data Architecture:</strong> Power BI Semantic Modelling, Star Schema, Snowflake SQL</li>
+            <li><strong>Infrastructure:</strong> Microsoft Fabric, Azure Data Factory (ADF), Azure DevOps</li>
+            <li><strong>Enterprise Delivery:</strong> Legacy System Retirement, Core Data Services (CDS), AI Readiness</li>
+        </ul>
+
         <p>This portfolio is currently under development.</p>
+        
         <div class="contact">
             <p style="margin-bottom: 1rem; color: #fff;">Get in touch:</p>
-            <a href="mailto:james@jegreen.co.uk">james@jegreen.co.uk</a>
+            <div class="button-group">
+                <a href="mailto:james@jegreen.co.uk" class="btn-primary">Email Me</a>
+                <a href="https://www.linkedin.com/in/james-green-25738b144/" target="_blank" class="btn-secondary">LinkedIn Profile</a>
+            </div>
         </div>
     </div>
 </body>
